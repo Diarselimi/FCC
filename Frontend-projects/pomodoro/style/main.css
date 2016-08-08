@@ -1,0 +1,79 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+
+.body-container {
+	padding: 50px 0;
+	margin: 100px 0;
+}
+
+.pomodoro {
+	text-align: center;
+	font-size: 22px;
+	font-family: 'Roboto', sans-serif;
+	margin: 0 !important;
+}
+
+.primary-color {
+	color: #EF3D4F;
+}
+
+.primary-button {
+	font-size: 34px;
+	color: #EF3D4F;
+}
+
+.faded-button {
+	color: #FBC4BB;
+}
+
+.session-btn {
+	color: #EF3D4F;
+}
+
+.settings-btn {
+	font-size: 28px;
+	color: #FBC4BB;
+	padding: 5px 10px;
+}
+
+.small {
+	font-size: 14px;
+}
+
+.pomodoro ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.pomodoro ul li {
+	display: inline-block;
+	margin: 5px;
+}
+
+.minutes {
+	font-size: 90px;
+	line-height: 40px;
+}
+
+.seconds {
+	font-size: 12px;
+	font-weight: 100;
+}
+
+.start-button {
+	width: 200px;
+	height: auto;
+	border-radius: 17px;
+	padding: 10px;
+	margin: 10px 0;
+	background-color: #EF3D4F;
+	color: #efefef;
+	border: 0;
+}
+
+.button:hover {
+	cursor: pointer;
+	background-color: #ef3d4f;
+	color: #fff;
+}
