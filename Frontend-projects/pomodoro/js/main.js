@@ -28,6 +28,22 @@ $(document).ready(function() {
     var increase = $('.increase');
     var decrease = $('.decrease');
     var sessBtn = $('.session-btn');
+    var ranger = $('#ranger');
+
+    ranger.on('mouseup', function() {
+        var tempInput = parseInt($(this).val());
+
+        if ((minutes + tempInput) < 60) {
+            minutes = minutes + parseInt($(this).val());
+            if(minutes <= 0){
+                minutes = 1;
+            }
+            duration = moment.duration(minutes, 'minutes');
+            renderValues();
+        }
+        ranger.val(0);
+        document.getElementById('ranger').value = 0;
+    });
 
     increase.on('click', function() {
         //do the same but give him a hint
@@ -37,6 +53,7 @@ $(document).ready(function() {
     decrease.on('click', function() {
         if (duration.minutes() > 0) {
             duration = duration.subtract(1, 'minutes');
+            minutes--;
             renderValues();
         } else {
             $(".minutes").animate({
@@ -63,9 +80,12 @@ $(document).ready(function() {
 function renderValues() {
     $('.minutes').html(duration.minutes()); //set the value to the html
     $('.seconds').html(duration.seconds()); //set the value to the html
-    minutes = duration.minutes();
 }
 
+/**
+ *
+ * @return {void}
+ */
 function renderSessions() {
     var sessionTodo = '<li class="ion-ios-circle-outline"></li>';
     var sessionDone = '<li class="ion-ios-checkmark"></li>';
@@ -85,7 +105,7 @@ function renderSessions() {
         } else {
             if (i + 1 <= sessDone) {
                 dots.append(sessionDone);
-            } else if (i == sessDone) {
+            } else if (i == sessDone && running) {
                 dots.append(sessionCurrent);
             } else {
                 dots.append(sessionTodo);
@@ -96,46 +116,55 @@ function renderSessions() {
 
 function start() {
     hideButtons();
+    renderSessions();
     running = true;
     duration = moment.duration(minutes, 'minutes');
 }
 
 function pause() {
-	running =  false;
-	//do some sound if in pause
+    running = false;
+    //do some sound if in pause
 }
 
 function resume() {
-	running = true;
+    running = true;
 }
-
-function updateValues() {
-
-    if (duration.seconds() > 1) {
-        duration = duration.subtract(1, 'seconds');
-    } else {
-        if (duration.minutes() > 0) {
-            duration = duration.subtract(1, 'minutes');
-            duration = duration.add(59, 'seconds');
-        } else {
-            duration = duration.subtract(1, 'seconds');
-
-            if (running) {
-                sessionEnd();
-            } else {
-                endBreak();
-            }
-        }
+/**
+ * @param  {Date time}
+ * @return {int}
+ */
+function update(duration, intervalSpeed) {
+    duration = duration.subtract(intervalSpeed, 'milliseconds');
+    if (duration.seconds() <= 0) {
+        sessionEnd();
     }
-
     renderValues();
 }
 
+/**
+ * @param  {Date time}
+ * @return {int}
+ */
+function updateBreak(duration, intervalSpeed) {
+    duration = duration.subtract(intervalSpeed, 'milliseconds');
+    if (duration.seconds() <= 0) {
+        endBreak();
+    }
+    renderValues();
+}
+
+/**
+ * This will call for every second the function
+ * @param  {callback}
+ * @param  {repeat interval}
+ * @return {void}
+ */
+var intervalSpeed = 1000;
 setInterval(function() {
     if (running) {
-        updateValues();
+        update(duration, intervalSpeed);
     } else if (onBreak) {
-        updateValues();
+        updateBreak(duration, intervalSpeed);
     } else {
         // nextSession();
     }
@@ -144,8 +173,8 @@ setInterval(function() {
 function sessionEnd() {
     renderValues();
     sessDone++;
-    renderSessions();
     running = false;
+    renderSessions();
     note.play();
     onBreak = true;
     duration = moment.duration(breakMinutes, 'minutes');
