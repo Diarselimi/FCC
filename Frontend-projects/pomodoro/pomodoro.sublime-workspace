@@ -4,6 +4,74 @@
 		"selected_items":
 		[
 			[
+				"back",
+				"background-color"
+			],
+			[
+				"ion-ios-cir",
+				"ion-ios-circle-outline"
+			],
+			[
+				"getEle",
+				"getElementById(id)	Element"
+			],
+			[
+				"mouse",
+				"mouseup	Event"
+			],
+			[
+				"parse",
+				"parseInt(string, radix)	Window"
+			],
+			[
+				"mou",
+				"mousedown	Event"
+			],
+			[
+				"function",
+				"function without name"
+			],
+			[
+				"cons",
+				"console.log()"
+			],
+			[
+				"show",
+				"showElements"
+			],
+			[
+				"eleme",
+				"elementHtml"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"fons",
+				"font-size"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
 				"sar",
 				"searchStr"
 			],
@@ -27,14 +95,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 1872,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -52,12 +112,36 @@
 				"Package Control: Install Package"
 			],
 			[
+				"doc",
+				"DocBlockr: Reparse comment block"
+			],
+			[
+				"bea",
+				"Javascript Beautify"
+			],
+			[
 				"i",
 				"Package Control: Install Package"
 			],
 			[
 				"ins",
 				"Package Control: Install Package"
+			],
+			[
+				"git p",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"git co",
+				"Git: Commit"
 			],
 			[
 				"java",
@@ -95,11 +179,27 @@
 	[
 		"/home/diar/Github/FCC",
 		"/home/diar/Github/FCC/Frontend-projects",
-		"/home/diar/Github/FCC/Frontend-projects/pomodoro"
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/js"
 	],
 	"file_history":
 	[
+		"/home/diar/Desktop/app/css/app.css",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/index.html",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/style/main.css",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/js/main.js",
+		"/home/diar/Desktop/app/index.html",
+		"/home/diar/Documents/ios images/101APPLE/IMG_1001.JPG",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/js/tinucon.js",
+		"/home/diar/Desktop/stop apache",
+		"/home/diar/.config/sublime-text-3/Packages/DocBlockr/README.md",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/style/ionicons.min.css",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/style/bootstrap.css",
+		"/home/diar/Desktop/test.html",
+		"/home/diar/Desktop/template.js",
+		"/opt/lampp/htdocs/sbwrapper/web/assets/js/Magazine/Template.js",
 		"/home/diar/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/pomodoro.sublime-project",
 		"/home/diar/Downloads/Rosetta Stone TOTALe - v5.0.37 Build 43113 + Language Packs + Audio Companion/Install Notes.txt",
 		"/etc/hosts",
 		"/etc/php/7.0/cli/php.ini",
@@ -124,7 +224,7 @@
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -138,6 +238,13 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"Helve",
+			"Helvetica",
+			"HelveticaNeueCond",
+			"local",
+			">\n",
+			");",
+			"\">\n",
 			"\"",
 			"`",
 			"gdNj",
@@ -161,77 +268,14 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1872,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1063,
-								1063
-							]
-						],
-						"settings":
-						{
-							"color_helper.file_palette":
-							[
-							],
-							"color_helper.scan":
-							{
-								"allowed_colors":
-								[
-									"hex_compressed",
-									"hsl",
-									"hsla",
-									"hex",
-									"webcolors",
-									"rgb",
-									"rgba"
-								],
-								"compress_hex_output": true,
-								"current_ext": ".html",
-								"current_syntax": "HTML/HTML",
-								"enabled": true,
-								"last_updated": 1470690126.28,
-								"scan_completion_scopes":
-								[
-								],
-								"scan_scopes":
-								[
-									"meta.property-value.css -comment -string",
-									"meta.value.css -comment -string",
-									"meta.tag.inline.any.html string.quoted",
-									"meta.tag.any.html meta.attribute-with-value.style.html"
-								],
-								"use_hex_argb": false
-							},
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -268,11 +312,15 @@
 	{
 		"height": 0.0
 	},
+	"output.git":
+	{
+		"height": 100.0
+	},
 	"pinned_build_system": "Packages/User/node.sublime-build",
 	"project": "pomodoro.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -281,6 +329,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"main",
+				"Frontend-projects/pomodoro/style/main.css"
+			],
+			[
+				"in",
+				"Frontend-projects/pomodoro/index.html"
+			],
+			[
+				"po",
+				"Frontend-projects/pomodoro/pomodoro.sublime-project"
+			],
 			[
 				"inde",
 				"Frontend-projects/pomodoro/index.html"
@@ -313,8 +373,8 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 210.0,
+	"side_bar_visible": false,
+	"side_bar_width": 214.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

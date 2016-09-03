@@ -1,201 +1,245 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto';
 
-
 .body-container {
-	padding: 50px 0;
-	margin: 100px 0;
+    padding: 50px 0;
+    margin: 0;
+    line-height: 4;
+}
+
+.dots {
+    display: inline-block;
 }
 
 .pomodoro {
-	text-align: center;
-	font-size: 22px;
-	font-family: 'Roboto', sans-serif;
-	margin: 0 !important;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 !important;
 }
 
 .primary-color {
-	color: #EF3D4F;
+    color: #EF3D4F;
+}
+
+.secondary-color {
+    color: #F6B103;
+}
+
+.session-dot {
 }
 
 .primary-button {
-	font-size: 34px;
-	color: #EF3D4F;
+    font-size: 34px;
+    color: #EF3D4F;
 }
 
 .faded-button {
-	color: #FBC4BB;
+    color: #FBC4BB;
 }
 
 .session-btn {
-	color: #EF3D4F;
+    font-size: 28px;
+    color: #EF3D4F;
+    cursor: pointer;
 }
 
+
 .settings-btn {
-	font-size: 28px;
-	color: #FBC4BB;
-	padding: 5px 10px;
+    font-size: 28px;
+    color: #FBC4BB;
+    padding: 5px 10px;
 }
 
 .small {
-	font-size: 14px;
+    font-size: 14px;
 }
 
 .pomodoro ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .pomodoro ul li {
-	display: inline-block;
-	margin: 5px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.circle {
+    width: 250px;
+    height: 250px;
+    background: #4d4d4d;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
 }
 
 .minutes {
-	font-size: 90px;
-	line-height: 40px;
+    font-size: 95px;
+    line-height: 250px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: #FEFDFD;
 }
 
 .seconds {
-	font-size: 12px;
-	font-weight: 100;
+    position: absolute;
+    top: 0;
+    left: 75px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 2.5;
+    background-color: #fff;
+    color: #333;
+    border-radius: 50%;
+    width: 13.3%;
+    height: 13.3%;
+    text-align: center;
+    border: 2px solid #4d4d4d;
 }
 
 .start-button {
-	width: 200px;
-	height: auto;
-	border-radius: 17px;
-	padding: 10px;
-	margin: 10px 0;
-	background-color: #EF3D4F;
-	color: #efefef;
-	border: 0;
+    width: 200px;
+    height: auto;
+    border-radius: 17px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #EF3D4F;
+    color: #efefef;
+    border: 0;
 }
 
 .button:hover {
-	cursor: pointer;
-	background-color: #ef3d4f;
-	color: #fff;
+    cursor: pointer;
+    background-color: #ef3d4f;
+    color: #fff;
 }
+
+
 
 /*ranger style */
 input[type=range] {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
 }
 
 input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 }
 
 input[type=range]:focus {
-  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
 
 input[type=range]::-ms-track {
-  width: 100%;
-  cursor: pointer;
+    width: 100%;
+    cursor: pointer;
 
-  /* Hides the slider so custom styles can be added */
-  background: transparent; 
-  border-color: transparent;
-  color: transparent;
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
 }
 
-/*/ styling the thumb /*/ 
+/*/ styling the thumb /*/
 /* Special styling for WebKit/Blink */
 input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: 1px solid #EF3D4F;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background: #EF3D4F;
-  cursor: pointer;
-  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    -webkit-appearance: none;
+    border: 1px solid #EF3D4F;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #EF3D4F;
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 }
 
 /* All the same stuff for Firefox */
 input[type=range]::-moz-range-thumb {
-  border: 1px solid #EF3D4F;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background: #EF3D4F;
-  cursor: pointer;
-  margin-top: -14px;
+    border: 1px solid #EF3D4F;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #EF3D4F;
+    cursor: pointer;
+    margin-top: -14px;
 }
 
 /* All the same stuff for IE */
 input[type=range]::-ms-thumb {
- border: 1px solid #EF3D4F;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background: #EF3D4F;
-  cursor: pointer;
-  margin-top: -14px;
+    border: 1px solid #EF3D4F;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #EF3D4F;
+    cursor: pointer;
+    margin-top: -14px;
 }
 
 /* style of the line */
 input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 2.4px;
-  cursor: pointer;
-  box-shadow: none;
-  background: #DEDCDB;
-  border-radius: 1.3px;
-  border: none;
+    width: 100%;
+    height: 2.4px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #DEDCDB;
+    border-radius: 1.3px;
+    border: none;
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #DEDCDB;
+    background: #DEDCDB;
 }
 
 input[type=range]::-moz-range-track {
- width: 100%;
-  height: 2.4px;
-  cursor: pointer;
-  box-shadow: none;
-  background: #DEDCDB;
-  border-radius: 1.3px;
-  border: none;
+    width: 100%;
+    height: 2.4px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #DEDCDB;
+    border-radius: 1.3px;
+    border: none;
 }
 
 input[type=range]::-ms-track {
-  width: 100%;
-  height: 2.4px;
-  cursor: pointer;
-  box-shadow: none;
-  background: #DEDCDB;
-  border-radius: 1.3px;
-  border: none;
-  border-color: transparent;
-  border-width: 16px 0;
-  color: transparent;
+    width: 100%;
+    height: 2.4px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #DEDCDB;
+    border-radius: 1.3px;
+    border: none;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
 }
+
 input[type=range]::-ms-fill-lower {
-	width: 100%;
-  height: 2.4px;
-  cursor: pointer;
-  box-shadow: none;
-  background: #DEDCDB;
-  border-radius: 1.3px;
-  border: none;
+    width: 100%;
+    height: 2.4px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #DEDCDB;
+    border-radius: 1.3px;
+    border: none;
 }
+
 input[type=range]:focus::-ms-fill-lower {
-  background: #DEDCDB;
+    background: #DEDCDB;
 }
+
 input[type=range]::-ms-fill-upper {
-  	width: 100%;
-  height: 2.4px;
-  cursor: pointer;
-  box-shadow: none;
-  background: #DEDCDB;
-  border-radius: 1.3px;
-  border: none;
+    width: 100%;
+    height: 2.4px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #DEDCDB;
+    border-radius: 1.3px;
+    border: none;
 }
+
 input[type=range]:focus::-ms-fill-upper {
-  background: #DEDCDB;
+    background: #DEDCDB;
 }
