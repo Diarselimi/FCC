@@ -1,0 +1,382 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"ion-ios-cir",
+				"ion-ios-circle-outline"
+			],
+			[
+				"getEle",
+				"getElementById(id)	Element"
+			],
+			[
+				"mouse",
+				"mouseup	Event"
+			],
+			[
+				"parse",
+				"parseInt(string, radix)	Window"
+			],
+			[
+				"mou",
+				"mousedown	Event"
+			],
+			[
+				"function",
+				"function without name"
+			],
+			[
+				"cons",
+				"console.log()"
+			],
+			[
+				"show",
+				"showElements"
+			],
+			[
+				"eleme",
+				"elementHtml"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"fons",
+				"font-size"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"sar",
+				"searchStr"
+			],
+			[
+				"fo",
+				"found"
+			],
+			[
+				"sear",
+				"searchStr"
+			],
+			[
+				"word",
+				"wordsFound"
+			],
+			[
+				"le",
+				"length"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 357.0,
+		"last_filter": "in",
+		"selected_items":
+		[
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"doc",
+				"DocBlockr: Reparse comment block"
+			],
+			[
+				"bea",
+				"Javascript Beautify"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"git p",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"java",
+				"Javascript Beautify"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"set java",
+				"Set Syntax: JavaScript"
+			]
+		],
+		"width": 431.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/diar/Github/FCC",
+		"/home/diar/Github/FCC/Frontend-projects",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/js"
+	],
+	"file_history":
+	[
+		"/home/diar/Desktop/app/css/app.css",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/index.html",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/style/main.css",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/js/main.js",
+		"/home/diar/Desktop/app/index.html",
+		"/home/diar/Documents/ios images/101APPLE/IMG_1001.JPG",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/js/tinucon.js",
+		"/home/diar/Desktop/stop apache",
+		"/home/diar/.config/sublime-text-3/Packages/DocBlockr/README.md",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/style/ionicons.min.css",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/style/bootstrap.css",
+		"/home/diar/Desktop/test.html",
+		"/home/diar/Desktop/template.js",
+		"/opt/lampp/htdocs/sbwrapper/web/assets/js/Magazine/Template.js",
+		"/home/diar/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/diar/Github/FCC/Frontend-projects/pomodoro/pomodoro.sublime-project",
+		"/home/diar/Downloads/Rosetta Stone TOTALe - v5.0.37 Build 43113 + Language Packs + Audio Companion/Install Notes.txt",
+		"/etc/hosts",
+		"/etc/php/7.0/cli/php.ini",
+		"/home/diar/Desktop/searchbookkeeper (1)",
+		"/home/diar/.cache/.fr-rUkHqk/UCI ADL Binary Dataset/OrdonezA_Description.txt",
+		"/home/diar/.cache/.fr-NfiwK6/UCI ADL Binary Dataset/OrdonezA_ADLs.txt",
+		"/home/diar/.cache/.fr-Rt7gKG/UCI ADL Binary Dataset/OrdonezA_Sensors.txt",
+		"/home/diar/Desktop/FCC/Frontend-projects/calc/calculator.js",
+		"/home/diar/Pictures/Qutoes/searchbookkeeper",
+		"/home/diar/Pictures/Qutoes/searchbookkeeper (1)",
+		"/home/diar/dumps/Dump20160726/famebit_user.sql",
+		"/home/diar/dumps/Dump20160726-1/famebit_user.sql",
+		"/home/diar/Desktop/searchbookkeeper",
+		"/tmp/fz3temp-1/php.ini",
+		"/tmp/fz3temp-1/.htaccess",
+		"/home/diar/.config/sublime-text-3/Packages/User/test.js",
+		"/home/diar/Downloads/OS X 10.11 El Capitan Retail by TechReviews/Tutorial By TechReviews.txt",
+		"/home/diar/.config/sublime-text-3/Packages/User/node.sublime-build",
+		"/home/diar/Dropbox/Jaywalker Digital Team Folder/Symfony/relations/OneToMany.php",
+		"/home/diar/Dropbox/Jaywalker Digital Team Folder/Symfony/relations/One-To-Many, Self-referencing.php",
+		"/home/diar/Dropbox/Jaywalker Digital Team Folder/Symfony/js/ajax_request.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 112.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"Helve",
+			"Helvetica",
+			"HelveticaNeueCond",
+			"local",
+			">\n",
+			");",
+			"\">\n",
+			"\"",
+			"`",
+			"gdNj",
+			"g"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 295.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "Packages/User/node.sublime-build",
+	"project": "pomodoro.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"main",
+				"Frontend-projects/pomodoro/style/main.css"
+			],
+			[
+				"in",
+				"Frontend-projects/pomodoro/index.html"
+			],
+			[
+				"po",
+				"Frontend-projects/pomodoro/pomodoro.sublime-project"
+			],
+			[
+				"inde",
+				"Frontend-projects/pomodoro/index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 214.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
