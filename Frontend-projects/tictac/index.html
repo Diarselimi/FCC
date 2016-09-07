@@ -3,8 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
+<div class="container">
+    <div class="row">
+        <div class="col l4 offset-l4 center-align">
+
+            <h1 class="flow-text">Tic Tac Toe</h1>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col m3">
+            <div class="chip">
+                Your Character
+                <i class="material-icons your-character-place">none</i>
+            </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="card horizontal">
+                <ul class="board">
+                    <li class="item game-btn waves-effect " data-error="wrong">
+                        <i class="material-icons f4"></i>
+                    </li>
+                    <li class="item game-btn waves-effect">
+                        <i class="material-icons f4"></i>
+                    </li>
+                    <li class="item game-btn waves-effect">
+                        <i class="material-icons f4"></i>
+                    </li>
+                    <li class="item game-btn waves-effect">
+                        <i class="material-icons f4"></i>
+                    </li>
+                    <li class="item game-btn waves-effect">
+                        <i class="material-icons f4"></i>
+                    </li>
+                    <li class="item game-btn waves-effect">
+                        <i class="material-icons f4"></i>
+                    </li>
+                    <li class="item game-btn waves-effect">
+                        <i class="material-icons f4"></i>
+                    </li>
+                    <li class="item game-btn waves-effect">
+                        <i class="material-icons f4"></i>
+                    </li>
+                    <li class="item game-btn waves-effect">
+                        <i class="material-icons f4"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="col m12 center-align">
+                <!-- Modal Trigger -->
+                <button data-target="modal1" class="btn modal-trigger prime play-btn" onclick="play()">Play</button>
+            </div>
+            <a class="btn" onclick="Materialize.toast('I am a toast', 4000,'',function(){alert('Your toast was dismissed')})">Toast!</a>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal" style="width: 38%;">
+                <div class="modal-content center-align">
+                    <h4>Choose your character</h4>
+                    <ul class="center-align">
+                        <li class="waves-effect btn" onclick="selectCharacter(0)">
+                            <i class="material-icons">panorama_fish_eye</i>
+                        </li>
+                        <li class="waves-effect btn" onclick="selectCharacter(1)">
+                            <i class="material-icons">clear</i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/tictac.js"></script>
 </body>
 </html>
