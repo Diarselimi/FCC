@@ -5,14 +5,14 @@ var values = [
 ];
 
 var winningCombinations = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-    [7, 4, 1],
-    [8, 5, 2],
-    [9, 6, 3],
-    [9, 5, 1],
-    [7, 5, 3]
+    [[0, 0], [0, 1], [0, 2]],
+    [[1, 3], [1, 4], [1, 5]],
+    [[2, 6], [2, 7], [2, 8]]
+    // [7, 4, 1],
+    // [8, 5, 2],
+    // [9, 6, 3],
+    // [9, 5, 1],
+    // [7, 5, 3]
 ];
 
 var drawMessages = [
@@ -36,6 +36,7 @@ var sameButtonMessages = [
 var chars = {1: 'clear', 0: 'panorama_fish_eye'};
 var playerChar;
 var playerHasTheMove = (playerChar == 0);
+var clickedBlock = [];
 
 /**
  * This function will save the selected character of the user
@@ -44,6 +45,7 @@ var playerHasTheMove = (playerChar == 0);
 function selectCharacter(key) {
     playerChar = key;
     $('.your-character-place').html(chars[key]);
+    $('.pc-character-place').html((key === 0) ? chars[1] : chars[0]);
     $('.play-btn').html('Reset').attr('onclick', 'reset()');
     $('#modal1').closeModal();
 }
@@ -116,6 +118,7 @@ function renderBlocks() {
 
 //this will fill the block with the specific key
 function fillBlock(block) {
+    clickedBlock = [$(block).data('row'), $(block).data('pos')];
     values[$(block).data('row')][$(block).data('pos')] = playerChar;
     renderBlocks();
 }
@@ -132,7 +135,10 @@ function playerTurn() {
 
 //play the move by the computer
 function playComputer() {
-    if (hasMoreBlocks()) {
+
+    if (checkWinner()) {
+
+    }else if (hasMoreBlocks()) {
 
         var x = Math.round(Math.random() * 2);
         var y = Math.round(Math.random() * 2);
@@ -145,8 +151,8 @@ function playComputer() {
         values[x][y] = (playerChar == 0) ? 1 : 0;
         playerHasTheMove = true;
         renderBlocks();
-    }else{
-        Materialize.toast(drawMessages[Math.round(Math.random() * drawMessages.length-1)], 3000, null);
+    } else {
+        Materialize.toast(drawMessages[Math.round(Math.random() * drawMessages.length - 1)], 3000, null);
     }
 }
 
@@ -154,7 +160,7 @@ function hasMoreBlocks() {
     var out = false;
     values.forEach(function (row, i) {
         row.forEach(function (ele, j) {
-            if(values[i][j] == null) {
+            if (values[i][j] == null) {
                 out = true;
             }
         });
@@ -163,11 +169,30 @@ function hasMoreBlocks() {
 }
 
 function checkWinner() {
-    var user = null;
-    winningCombinations.forEach(function (combination) {
-        combination.forEach(function (num) {
+    var a = checkX(clickedBlock[0]);
+    if (a !== false) {
+        Materialize.toast('The winner is ' + chars[a], 4000, null, function () {
+            newGame();
         });
-    });
+        return true;
+    }
+    return false;
+}
+
+function checkX(y) {
+    var tempCheck = [];
+    for (var x = 0; x < values.length; x++) {
+        tempCheck[x] = values[y][x];
+    }
+
+    if (tempCheck[1] === tempCheck[2] && tempCheck[0] === tempCheck[1]) {
+        for (var i = 0; i < values.length; i++) {
+            tempCheck[i] = values[y][i];
+            $('.board').find("[data-row='" + y + "'][data-pos='" + i + "']").addClass('winner-block');
+        }
+        return tempCheck[0];
+    }
+    return false;
 }
 
 $(document).ready(function () {

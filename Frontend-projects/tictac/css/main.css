@@ -28,7 +28,8 @@ body {
     background-color: #BDBDBD;
 }
 
-.chip .your-character-place {
+.chip .your-character-place,
+.chip .pc-character-place {
     cursor: pointer;
     float: right;
     font-size: 16px;
@@ -57,4 +58,9 @@ body {
 .prime {
     background-color: #FF4081;
     color: #fff;
+}
+
+.winner-block {
+    background-color: #FF4081 !important;
+    color: #fff !important;
 }
