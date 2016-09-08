@@ -8,11 +8,6 @@ var winningCombinations = [
     [[0, 0], [0, 1], [0, 2]],
     [[1, 3], [1, 4], [1, 5]],
     [[2, 6], [2, 7], [2, 8]]
-    // [7, 4, 1],
-    // [8, 5, 2],
-    // [9, 6, 3],
-    // [9, 5, 1],
-    // [7, 5, 3]
 ];
 
 var drawMessages = [
@@ -37,6 +32,7 @@ var chars = {1: 'clear', 0: 'panorama_fish_eye'};
 var playerChar;
 var playerHasTheMove = (playerChar == 0);
 var clickedBlock = [];
+var isDisabled = false;
 
 /**
  * This function will save the selected character of the user
@@ -76,6 +72,7 @@ function reset() {
 }
 
 function newGame() {
+    isDisabled = false;
     values.forEach(function (row, i) {
         row.forEach(function (ele, j) {
             values[i][j] = null;
@@ -138,7 +135,7 @@ function playComputer() {
 
     if (checkWinner()) {
 
-    }else if (hasMoreBlocks()) {
+    } else if (hasMoreBlocks()) {
 
         var x = Math.round(Math.random() * 2);
         var y = Math.round(Math.random() * 2);
@@ -168,10 +165,21 @@ function hasMoreBlocks() {
     return out;
 }
 
+/**
+ * This function will disable clicking on the blocks
+ * @returns {boolean}
+ */
+function disableBlocks() {
+    isDisabled = true;
+}
+
 function checkWinner() {
     var a = checkX(clickedBlock[0]);
-    if (a !== false) {
-        Materialize.toast('The winner is ' + chars[a], 4000, null, function () {
+    var b = checkY(clickedBlock[1]);
+    var c = checkDiagonal();
+    if (a !== false || b !== false || c !== false) {
+        disableBlocks();
+        Materialize.toast('The winner is the  <i class="material-icons">' + chars[c] + '</i> character.', 3000, null, function () {
             newGame();
         });
         return true;
@@ -195,12 +203,47 @@ function checkX(y) {
     return false;
 }
 
+function checkY(x) {
+    var tempCheck = [];
+    for (var y = 0; y < values.length; y++) {
+        tempCheck[y] = values[y][x];
+    }
+
+    if (tempCheck[1] === tempCheck[2] && tempCheck[0] === tempCheck[1]) {
+        for (var i = 0; i < values.length; i++) {
+            tempCheck[i] = values[i][x];
+            $('.board').find("[data-row='" + i + "'][data-pos='" + x + "']").addClass('winner-block');
+        }
+        return tempCheck[0];
+    }
+    return false;
+}
+
+function checkDiagonal() {
+
+    if (values[0][0] === values[1][1] && values[1][1] === values[2][2] && values[2][2] !== null) {
+        for (var d = 0; d < 3; d++) {
+            $('.board').find("[data-row='" + d + "'][data-pos='" + d + "']").addClass('winner-block');
+        }
+        return values[1][1];
+    }
+
+    if (values[0][2] === values[1][1] && values[1][1] === values[2][0] && values[2][0] !== null) {
+        for (var x = 0, y = 2; x < 3 && y >= 0; x++, y--) {
+            $('.board').find("[data-row='" + x + "'][data-pos='" + y + "']").addClass('winner-block');
+        }
+        return values[1][1];
+    }
+
+    return false;
+}
+
 $(document).ready(function () {
 
     renderBlocks();
 
     $('body').on('click', '.game-btn', function () {
-        if (play()) {
+        if (play() && !isDisabled) {
             if (isValidField($(this))) {
                 fillBlock($(this));
                 playComputer();
